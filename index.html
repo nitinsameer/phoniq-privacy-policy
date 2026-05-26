@@ -1,116 +1,682 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>PhonIQ Privacy Policy</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      line-height: 1.6;
-      margin: 0;
-      padding: 0;
-      background: #0f0c1a;
-      color: #f0ecff;
-    }
-    .container {
-      max-width: 900px;
-      margin: auto;
-      padding: 20px;
-    }
-    h1, h2 {
-      color: #7c5cfc;
-    }
-    a {
-      color: #ff6b9d;
-    }
-    .card {
-      background: #1a1630;
-      padding: 20px;
-      border-radius: 12px;
-      margin-bottom: 20px;
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privacy Policy – PhonIQ</title>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Baloo+2:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --sky: #E8F4FD;
+    --blue-deep: #1A5F9C;
+    --blue-mid: #2B84D8;
+    --blue-light: #5BAAEE;
+    --yellow: #FFD93D;
+    --orange: #FF6B35;
+    --green: #4CAF82;
+    --pink: #FF6B9D;
+    --purple: #7B5EA7;
+    --white: #FFFFFF;
+    --text-dark: #1A2C45;
+    --text-mid: #3A5270;
+    --text-light: #6B8BA4;
+    --card-bg: #FFFFFF;
+    --border-radius: 20px;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Nunito', sans-serif;
+    background: linear-gradient(160deg, #E8F4FD 0%, #D4EAF7 40%, #EAF6FF 100%);
+    min-height: 100vh;
+    color: var(--text-dark);
+  }
+
+  /* ── HEADER ── */
+  header {
+    background: linear-gradient(135deg, var(--blue-deep) 0%, var(--blue-mid) 60%, var(--blue-light) 100%);
+    padding: 48px 24px 80px;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+  }
+
+  header::before {
+    content: '';
+    position: absolute;
+    top: -60px; right: -60px;
+    width: 260px; height: 260px;
+    background: rgba(255,255,255,0.07);
+    border-radius: 50%;
+  }
+  header::after {
+    content: '';
+    position: absolute;
+    bottom: -80px; left: -40px;
+    width: 200px; height: 200px;
+    background: rgba(255,255,255,0.05);
+    border-radius: 50%;
+  }
+
+  .header-badge {
+    display: inline-block;
+    background: rgba(255,255,255,0.15);
+    border: 1.5px solid rgba(255,255,255,0.3);
+    color: #fff;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 6px 16px;
+    border-radius: 100px;
+    margin-bottom: 20px;
+  }
+
+  .app-logo {
+    display: inline-flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 14px;
+  }
+
+  .logo-icon {
+    width: 64px; height: 64px;
+    background: var(--yellow);
+    border-radius: 18px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 32px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+  }
+
+  .logo-text {
+    font-family: 'Baloo 2', cursive;
+    font-size: 42px;
+    font-weight: 800;
+    color: #fff;
+    text-shadow: 0 2px 12px rgba(0,0,0,0.2);
+  }
+
+  .logo-text span { color: var(--yellow); }
+
+  header h1 {
+    font-family: 'Baloo 2', cursive;
+    font-size: 28px;
+    font-weight: 700;
+    color: rgba(255,255,255,0.9);
+    margin-bottom: 10px;
+  }
+
+  .header-meta {
+    font-size: 14px;
+    color: rgba(255,255,255,0.65);
+    font-weight: 600;
+  }
+
+  /* Wavy divider */
+  .wave-divider {
+    display: block;
+    width: 100%;
+    margin-top: -2px;
+  }
+
+  /* ── LAYOUT ── */
+  main {
+    max-width: 820px;
+    margin: 0 auto;
+    padding: 0 20px 60px;
+    margin-top: -40px;
+    position: relative;
+    z-index: 2;
+  }
+
+  /* ── INTRO CARD ── */
+  .intro-card {
+    background: var(--yellow);
+    border-radius: var(--border-radius);
+    padding: 28px 32px;
+    margin-bottom: 28px;
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+    box-shadow: 0 8px 32px rgba(255,180,0,0.25);
+  }
+
+  .intro-card .icon { font-size: 40px; flex-shrink: 0; line-height: 1; }
+
+  .intro-card p {
+    font-size: 15.5px;
+    font-weight: 700;
+    color: #4A3000;
+    line-height: 1.65;
+  }
+
+  /* ── SECTION CARDS ── */
+  .section-card {
+    background: var(--card-bg);
+    border-radius: var(--border-radius);
+    padding: 32px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 24px rgba(26,95,156,0.08);
+    border: 1.5px solid rgba(91,170,238,0.15);
+    animation: fadeUp 0.5s ease both;
+  }
+
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  .section-card:nth-child(2)  { animation-delay: 0.05s; }
+  .section-card:nth-child(3)  { animation-delay: 0.10s; }
+  .section-card:nth-child(4)  { animation-delay: 0.15s; }
+  .section-card:nth-child(5)  { animation-delay: 0.20s; }
+  .section-card:nth-child(6)  { animation-delay: 0.25s; }
+  .section-card:nth-child(7)  { animation-delay: 0.30s; }
+  .section-card:nth-child(8)  { animation-delay: 0.35s; }
+  .section-card:nth-child(9)  { animation-delay: 0.40s; }
+  .section-card:nth-child(10) { animation-delay: 0.45s; }
+  .section-card:nth-child(11) { animation-delay: 0.50s; }
+
+  .section-header {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 18px;
+    padding-bottom: 16px;
+    border-bottom: 2px dashed rgba(91,170,238,0.3);
+  }
+
+  .section-icon {
+    width: 46px; height: 46px;
+    border-radius: 14px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 22px;
+    flex-shrink: 0;
+  }
+
+  .icon-blue   { background: #E8F4FD; }
+  .icon-green  { background: #E8F7F0; }
+  .icon-yellow { background: #FFF8E1; }
+  .icon-pink   { background: #FFF0F6; }
+  .icon-purple { background: #F3EFF9; }
+  .icon-orange { background: #FFF3EE; }
+  .icon-teal   { background: #E6F7F7; }
+
+  .section-title {
+    font-family: 'Baloo 2', cursive;
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--text-dark);
+  }
+
+  .section-num {
+    font-size: 11px;
+    font-weight: 800;
+    color: var(--text-light);
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 2px;
+  }
+
+  /* Content styles */
+  .section-card p {
+    font-size: 14.5px;
+    line-height: 1.75;
+    color: var(--text-mid);
+    margin-bottom: 12px;
+  }
+
+  .section-card p:last-child { margin-bottom: 0; }
+
+  .section-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0 12px;
+  }
+
+  .section-card ul li {
+    font-size: 14.5px;
+    color: var(--text-mid);
+    line-height: 1.7;
+    padding: 6px 0 6px 28px;
+    position: relative;
+    border-bottom: 1px solid rgba(91,170,238,0.08);
+  }
+
+  .section-card ul li:last-child { border-bottom: none; }
+
+  .section-card ul li::before {
+    content: '✦';
+    position: absolute;
+    left: 4px;
+    top: 8px;
+    font-size: 10px;
+    color: var(--blue-light);
+  }
+
+  .highlight-box {
+    background: linear-gradient(135deg, #E8F4FD, #D4EAF7);
+    border-left: 4px solid var(--blue-mid);
+    border-radius: 12px;
+    padding: 14px 18px;
+    margin: 14px 0;
+    font-size: 14px;
+    color: var(--blue-deep);
+    font-weight: 700;
+    line-height: 1.6;
+  }
+
+  .green-box {
+    background: linear-gradient(135deg, #E8F7F0, #D4F0E4);
+    border-left: 4px solid var(--green);
+    border-radius: 12px;
+    padding: 14px 18px;
+    margin: 14px 0;
+    font-size: 14px;
+    color: #1A4A34;
+    font-weight: 700;
+    line-height: 1.6;
+  }
+
+  .warning-box {
+    background: linear-gradient(135deg, #FFF8E1, #FFF3C4);
+    border-left: 4px solid var(--yellow);
+    border-radius: 12px;
+    padding: 14px 18px;
+    margin: 14px 0;
+    font-size: 14px;
+    color: #5A3E00;
+    font-weight: 700;
+    line-height: 1.6;
+  }
+
+  /* ── CONTACT CARD ── */
+  .contact-card {
+    background: linear-gradient(135deg, var(--blue-deep), var(--blue-mid));
+    border-radius: var(--border-radius);
+    padding: 36px 32px;
+    text-align: center;
+    margin-bottom: 20px;
+    box-shadow: 0 12px 40px rgba(26,95,156,0.25);
+  }
+
+  .contact-card h2 {
+    font-family: 'Baloo 2', cursive;
+    font-size: 22px;
+    font-weight: 800;
+    color: #fff;
+    margin-bottom: 8px;
+  }
+
+  .contact-card p {
+    font-size: 14.5px;
+    color: rgba(255,255,255,0.75);
+    margin-bottom: 20px;
+    line-height: 1.6;
+  }
+
+  .contact-detail {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: rgba(255,255,255,0.12);
+    border: 1.5px solid rgba(255,255,255,0.25);
+    border-radius: 50px;
+    padding: 10px 22px;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 700;
+    margin: 6px;
+    text-decoration: none;
+    transition: background 0.2s;
+  }
+
+  .contact-detail:hover { background: rgba(255,255,255,0.22); }
+
+  /* ── FOOTER ── */
+  footer {
+    text-align: center;
+    padding: 20px;
+    font-size: 13px;
+    color: var(--text-light);
+    font-weight: 600;
+  }
+
+  footer span { color: var(--blue-mid); }
+
+  /* ── COPPA BADGE ── */
+  .coppa-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: linear-gradient(135deg, #E8F7F0, #C8EEE0);
+    border: 2px solid var(--green);
+    border-radius: 50px;
+    padding: 8px 18px;
+    font-size: 13px;
+    font-weight: 800;
+    color: #1A4A34;
+    margin-bottom: 24px;
+  }
+
+  .toc {
+    background: #F4F8FD;
+    border-radius: 16px;
+    padding: 22px 28px;
+    margin-bottom: 28px;
+    border: 1.5px solid rgba(91,170,238,0.2);
+  }
+
+  .toc h3 {
+    font-family: 'Baloo 2', cursive;
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--blue-deep);
+    margin-bottom: 14px;
+  }
+
+  .toc-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6px 16px;
+  }
+
+  .toc-grid a {
+    font-size: 13.5px;
+    font-weight: 700;
+    color: var(--blue-mid);
+    text-decoration: none;
+    padding: 4px 0;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .toc-grid a:hover { color: var(--blue-deep); }
+  .toc-grid a::before { content: '→'; font-size: 12px; opacity: 0.7; }
+
+  @media (max-width: 600px) {
+    .toc-grid { grid-template-columns: 1fr; }
+    .logo-text { font-size: 32px; }
+    header h1 { font-size: 22px; }
+    .section-card { padding: 22px 18px; }
+    .contact-card { padding: 28px 20px; }
+    .intro-card { flex-direction: column; gap: 12px; }
+  }
+</style>
 </head>
-
 <body>
-  <div class="container">
 
-```
-<h1>Privacy Policy for PhonIQ</h1>
-<p>Effective Date: January 1, 2026</p>
-
-<div class="card">
-  <p>
-    PhonIQ ("we", "our", or "us") is committed to protecting your privacy,
-    especially for children using our app. This Privacy Policy explains how
-    we handle information when you use our mobile application.
-  </p>
-</div>
-
-<div class="card">
-  <h2>1. Information We Collect</h2>
-  <p>We do not collect any personally identifiable information (PII) from children.</p>
-  <ul>
-    <li>App usage data (e.g., lessons completed, scores)</li>
-    <li>Device information (non-personal, for performance improvement)</li>
-  </ul>
-</div>
-
-<div class="card">
-  <h2>2. How We Use Information</h2>
-  <ul>
-    <li>To improve learning experience</li>
-    <li>To track progress and personalize content</li>
-    <li>To fix bugs and improve performance</li>
-  </ul>
-</div>
-
-<div class="card">
-  <h2>3. Children's Privacy</h2>
-  <p>
-    PhonIQ is designed for children under 13. We comply with applicable laws
-    such as COPPA (Children's Online Privacy Protection Act).
-  </p>
-  <p>
-    We do not knowingly collect personal data from children.
-  </p>
-</div>
-
-<div class="card">
-  <h2>4. Third-Party Services</h2>
-  <p>
-    We may use trusted third-party services (such as analytics tools) that
-    collect non-personal data to improve the app.
-  </p>
-</div>
-
-<div class="card">
-  <h2>5. Data Security</h2>
-  <p>
-    We take reasonable measures to protect your information, but no method
-    of transmission over the internet is 100% secure.
-  </p>
-</div>
-
-<div class="card">
-  <h2>6. Changes to This Policy</h2>
-  <p>
-    We may update this Privacy Policy from time to time. Updates will be
-    posted on this page with a revised effective date.
-  </p>
-</div>
-
-<div class="card">
-  <h2>7. Contact Us</h2>
-  <p>
-    If you have any questions about this Privacy Policy, contact us at:
-  </p>
-  <p>Email: <a href="mailto:nitinsameer@gmail.com">nitinsameer@gmail.com</a></p>
-</div>
-```
-
+<!-- HEADER -->
+<header>
+  <div class="header-badge">Nishaan Tech</div>
+  <div class="app-logo">
+    <div class="logo-icon">🔤</div>
+    <div class="logo-text">Phon<span>IQ</span></div>
   </div>
+  <h1>Privacy Policy</h1>
+  <p class="header-meta">Effective Date: June 1, 2025 &nbsp;·&nbsp; Last Updated: June 1, 2025</p>
+</header>
+
+<svg class="wave-divider" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 60" preserveAspectRatio="none">
+  <path fill="#E8F4FD" d="M0,30 C360,70 1080,-10 1440,30 L1440,60 L0,60 Z"/>
+</svg>
+
+<!-- MAIN -->
+<main>
+
+  <div style="text-align:center; margin-bottom: 20px;">
+    <div class="coppa-badge">
+      🛡️ COPPA Compliant &nbsp;·&nbsp; Safe for Kids Ages 3–9 &nbsp;·&nbsp; No Ads &nbsp;·&nbsp; No Data Collection
+    </div>
+  </div>
+
+  <!-- INTRO -->
+  <div class="intro-card">
+    <div class="icon">👋</div>
+    <p>Welcome to PhonIQ! We are committed to protecting the privacy of children and their families. This Privacy Policy explains how we handle information when you use our phonics learning app for children aged 3–9. Please read it carefully — we keep things simple and safe.</p>
+  </div>
+
+  <!-- TABLE OF CONTENTS -->
+  <div class="toc">
+    <h3>📋 What's Inside</h3>
+    <div class="toc-grid">
+      <a href="#overview">App Overview</a>
+      <a href="#data">Information We Collect</a>
+      <a href="#no-collection">What We Do NOT Collect</a>
+      <a href="#local">Local Storage</a>
+      <a href="#third-party">Third-Party Services</a>
+      <a href="#permissions">App Permissions</a>
+      <a href="#children">Children's Privacy (COPPA)</a>
+      <a href="#parents">Parents & Guardians</a>
+      <a href="#security">Data Security</a>
+      <a href="#changes">Policy Changes</a>
+      <a href="#contact">Contact Us</a>
+    </div>
+  </div>
+
+  <!-- 1. OVERVIEW -->
+  <div class="section-card" id="overview">
+    <div class="section-header">
+      <div class="section-icon icon-blue">📱</div>
+      <div>
+        <span class="section-num">Section 1</span>
+        <div class="section-title">App Overview</div>
+      </div>
+    </div>
+    <p><strong>App Name:</strong> PhonIQ — Learn Phonics &amp; Sounds</p>
+    <p><strong>Developer:</strong> Nishaan Tech</p>
+    <p><strong>Target Audience:</strong> Children aged 3–9 years</p>
+    <p><strong>Platform:</strong> Android (Google Play Store)</p>
+    <p>PhonIQ is an offline-first phonics learning app designed to help young children recognize letters, sounds, and words through engaging activities, XP rewards, avatar customization, and themed learning journeys. The app is built with child safety as a core principle.</p>
+  </div>
+
+  <!-- 2. INFO COLLECTED -->
+  <div class="section-card" id="data">
+    <div class="section-header">
+      <div class="section-icon icon-green">📊</div>
+      <div>
+        <span class="section-num">Section 2</span>
+        <div class="section-title">Information We Collect</div>
+      </div>
+    </div>
+
+    <div class="green-box">
+      ✅ PhonIQ is designed to work without collecting any personal information from children or their parents.
+    </div>
+
+    <p>The only data associated with your use of PhonIQ is <strong>stored locally on your device</strong> and includes:</p>
+    <ul>
+      <li>Child's chosen in-app nickname or first name (entered voluntarily for personalization)</li>
+      <li>Avatar selection and theme preferences</li>
+      <li>XP points, progress, and lesson completion data</li>
+      <li>App settings and feature preferences</li>
+    </ul>
+    <p>This information <strong>never leaves your device</strong>. It is not transmitted to our servers, shared with third parties, or used for any purpose other than making the app experience more personalized for the child.</p>
+  </div>
+
+  <!-- 3. WHAT WE DON'T COLLECT -->
+  <div class="section-card" id="no-collection">
+    <div class="section-header">
+      <div class="section-icon icon-pink">🚫</div>
+      <div>
+        <span class="section-num">Section 3</span>
+        <div class="section-title">What We Do NOT Collect</div>
+      </div>
+    </div>
+    <p>We want to be completely transparent. PhonIQ <strong>does not</strong> collect, store, or transmit:</p>
+    <ul>
+      <li>Full name, email address, phone number, or any contact details</li>
+      <li>Device identifiers, advertising IDs, or GAID</li>
+      <li>Location data (GPS or otherwise)</li>
+      <li>Photos, microphone recordings, or camera data</li>
+      <li>Behavioral analytics or usage tracking</li>
+      <li>Crash reports or diagnostic data sent to us</li>
+      <li>Payment information of any kind</li>
+      <li>Social network profiles or login credentials</li>
+    </ul>
+    <div class="highlight-box">
+      🎉 No ads. No in-app purchases. No account registration required. No internet connection needed to learn!
+    </div>
+  </div>
+
+  <!-- 4. LOCAL STORAGE -->
+  <div class="section-card" id="local">
+    <div class="section-header">
+      <div class="section-icon icon-yellow">💾</div>
+      <div>
+        <span class="section-num">Section 4</span>
+        <div class="section-title">Local Device Storage</div>
+      </div>
+    </div>
+    <p>PhonIQ stores all progress data, preferences, and settings using <strong>Android SharedPreferences and local app storage</strong> on the child's device. This data:</p>
+    <ul>
+      <li>Remains entirely on the device at all times</li>
+      <li>Is deleted when the app is uninstalled</li>
+      <li>Can be cleared at any time via Android Settings → Apps → PhonIQ → Clear Data</li>
+      <li>Is not backed up to any cloud service by us (device-level backup depends on the user's Android settings)</li>
+    </ul>
+  </div>
+
+  <!-- 5. THIRD PARTIES -->
+  <div class="section-card" id="third-party">
+    <div class="section-header">
+      <div class="section-icon icon-purple">🔗</div>
+      <div>
+        <span class="section-num">Section 5</span>
+        <div class="section-title">Third-Party Services</div>
+      </div>
+    </div>
+    <p>PhonIQ <strong>does not integrate</strong> any third-party SDKs for advertising, analytics, or social features. Specifically, we do not use:</p>
+    <ul>
+      <li>Google Analytics, Firebase Analytics, or Crashlytics</li>
+      <li>Google AdMob or any ad network</li>
+      <li>Facebook SDK or any social login</li>
+      <li>Any third-party data collection or tracking libraries</li>
+    </ul>
+    <p>The app is distributed through the <strong>Google Play Store</strong>. Google's own privacy policies may apply to device-level interactions. Please refer to <a href="https://policies.google.com/privacy" target="_blank" style="color:var(--blue-mid); font-weight:700;">Google's Privacy Policy</a> for details about how Google handles Play Store data.</p>
+  </div>
+
+  <!-- 6. PERMISSIONS -->
+  <div class="section-card" id="permissions">
+    <div class="section-header">
+      <div class="section-icon icon-orange">🔐</div>
+      <div>
+        <span class="section-num">Section 6</span>
+        <div class="section-title">App Permissions</div>
+      </div>
+    </div>
+    <p>PhonIQ requests only the minimum permissions necessary to function:</p>
+    <ul>
+      <li><strong>Audio/Sound:</strong> To play pre-recorded phoneme sounds and letter pronunciations. No recording is performed.</li>
+      <li><strong>Storage (Read):</strong> To load local app assets and learning content.</li>
+    </ul>
+    <div class="warning-box">
+      ⚠️ PhonIQ does NOT request access to the microphone, camera, contacts, location, or any sensitive permission.
+    </div>
+  </div>
+
+  <!-- 7. CHILDREN'S PRIVACY / COPPA -->
+  <div class="section-card" id="children">
+    <div class="section-header">
+      <div class="section-icon icon-pink">👶</div>
+      <div>
+        <span class="section-num">Section 7</span>
+        <div class="section-title">Children's Privacy (COPPA Compliance)</div>
+      </div>
+    </div>
+    <p>PhonIQ is directed at children under 13 years of age. We fully comply with the <strong>Children's Online Privacy Protection Act (COPPA)</strong> and Google Play's <strong>Families Policy</strong>.</p>
+    <ul>
+      <li>We do not knowingly collect personal information from children under 13</li>
+      <li>We do not require account creation or parental email for the app to function</li>
+      <li>We do not serve targeted or behavioral advertisements</li>
+      <li>We do not allow children to share personal information publicly within the app</li>
+      <li>No social features, chat, or external links are accessible to children within the app</li>
+    </ul>
+    <div class="green-box">
+      🛡️ This app is designated as a <strong>Kids App</strong> on Google Play and meets all requirements under the Google Play Families Policy, including the requirement to use only pre-approved, child-appropriate SDKs.
+    </div>
+  </div>
+
+  <!-- 8. PARENTS -->
+  <div class="section-card" id="parents">
+    <div class="section-header">
+      <div class="section-icon icon-teal">👨‍👩‍👧</div>
+      <div>
+        <span class="section-num">Section 8</span>
+        <div class="section-title">Parents &amp; Guardians</div>
+      </div>
+    </div>
+    <p>As a parent or guardian, you are in complete control of your child's experience with PhonIQ:</p>
+    <ul>
+      <li><strong>Review:</strong> All data stored by the app is local. You can view it via Android's App Info settings.</li>
+      <li><strong>Delete:</strong> Uninstalling the app removes all associated data from the device.</li>
+      <li><strong>Reset:</strong> Clear data at any time via Settings → Apps → PhonIQ → Clear Data.</li>
+      <li><strong>Parental Controls:</strong> We recommend using Android's built-in parental controls and Google Family Link for additional oversight.</li>
+    </ul>
+    <p>If you have any concerns about your child's privacy while using PhonIQ, please contact us at the email provided in Section 11.</p>
+  </div>
+
+  <!-- 9. SECURITY -->
+  <div class="section-card" id="security">
+    <div class="section-header">
+      <div class="section-icon icon-green">🔒</div>
+      <div>
+        <span class="section-num">Section 9</span>
+        <div class="section-title">Data Security</div>
+      </div>
+    </div>
+    <p>Since PhonIQ does not collect or transmit data over the internet, the risk surface is minimal. However, we take the following precautions:</p>
+    <ul>
+      <li>App is built following Android security best practices</li>
+      <li>Local storage uses Android's sandboxed app storage, inaccessible to other apps</li>
+      <li>No sensitive permissions are requested or used</li>
+      <li>The app does not establish any network connections to external servers</li>
+    </ul>
+  </div>
+
+  <!-- 10. CHANGES -->
+  <div class="section-card" id="changes">
+    <div class="section-header">
+      <div class="section-icon icon-yellow">🔄</div>
+      <div>
+        <span class="section-num">Section 10</span>
+        <div class="section-title">Changes to This Policy</div>
+      </div>
+    </div>
+    <p>We may update this Privacy Policy from time to time to reflect changes in the app or applicable laws. When we do:</p>
+    <ul>
+      <li>The "Last Updated" date at the top of this page will be revised</li>
+      <li>Significant changes will be communicated via a notice on the Google Play Store listing</li>
+      <li>Continued use of the app after changes constitutes acceptance of the updated policy</li>
+    </ul>
+    <p>We encourage parents to review this policy periodically. This policy is accessible at any time via the app's Settings screen and our Google Play Store listing.</p>
+  </div>
+
+  <!-- 11. CONTACT -->
+  <div class="contact-card" id="contact">
+    <h2>📬 Questions? We're Here!</h2>
+    <p>If you have any questions, concerns, or requests regarding this Privacy Policy or your child's data, please reach out to us. We typically respond within 2 business days.</p>
+    <div>
+      <a class="contact-detail" href="mailto:privacy@nishaantech.com">
+        ✉️ privacy@nishaantech.com
+      </a>
+      <a class="contact-detail" href="https://nishaantech.com" target="_blank">
+        🌐 nishaantech.com
+      </a>
+    </div>
+    <p style="margin-top: 20px; font-size: 13px; color: rgba(255,255,255,0.55);">
+      Nishaan Tech · Gurugram, Haryana, India
+    </p>
+  </div>
+
+</main>
+
+<footer>
+  <p>© 2025 <span>Nishaan Tech</span> · PhonIQ Privacy Policy · Designed with ❤️ for little learners</p>
+</footer>
+
 </body>
 </html>
